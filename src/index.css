@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-ink: #04050a;
+  --color-navy: #070a16;
+  --color-navy-light: #0d1226;
+  --color-surface: #0f1428;
+
+  --color-accent-purple: #a855f7;
+  --color-accent-blue: #4f7cff;
+  --color-accent-cyan: #22d3ee;
+  --color-accent-violet: #7c3aed;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 10s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3.5s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(-18px) translateX(6px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.55; filter: blur(40px); }
+    50% { opacity: 0.9; filter: blur(55px); }
+  }
+}
+
+/*
+ * Plain top-level keyframes (not tied to a Tailwind `--animate-*` token).
+ * These are referenced directly via inline `style={{ animation: "spin ..." }}`
+ * strings in the Skills orbit, so they must exist regardless of whether any
+ * `animate-*` utility class references them (Tailwind only emits @theme
+ * keyframes whose utility class is actually used in scanned content).
+ */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+html {
+  scroll-behavior: auto;
+  background: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: #e7e9f4;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+::selection {
+  background: var(--color-accent-violet);
+  color: white;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-accent-purple), var(--color-accent-blue));
+  border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  color: inherit;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(15, 20, 40, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #a855f7 0%, #4f7cff 50%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-accent-cyan);
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.25), 0 0 40px rgba(79, 124, 255, 0.15);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.sheen { position: relative; overflow: hidden; }
+.sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.14) 50%, transparent 60%);
+  transform: translateX(-150%) skewX(-15deg);
+  transition: transform 0.9s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.group:hover .sheen::before {
+  transform: translateX(150%) skewX(-15deg);
+}
