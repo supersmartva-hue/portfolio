@@ -37,7 +37,7 @@ function ProjectCard({ project, index }) {
               <span className="h-2.5 w-2.5 rounded-full bg-white/30" />
             </div>
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-              <span className="font-display text-lg font-semibold text-white drop-shadow-lg md:text-xl">
+              <span className="project-media-title font-display text-lg font-semibold text-white drop-shadow-lg md:text-xl">
                 {project.title}
               </span>
             </div>
