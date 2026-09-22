@@ -70,6 +70,7 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
+<<<<<<< HEAD
         {project.github || project.liveDemo ? (
           <div className="mt-6 flex flex-wrap gap-5">
             {project.github ? (
@@ -104,6 +105,19 @@ function ProjectCard({ project, index }) {
             ) : null}
           </div>
         ) : null}
+=======
+        <a
+          href={project.link}
+          data-cursor="hover"
+          className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white"
+        >
+          View case study
+          <ArrowUpRight
+            size={16}
+            className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+          />
+        </a>
+>>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
       </div>
     </motion.div>
   );
