@@ -94,10 +94,6 @@ export const skills = [
   { name: "AI Agents", ring: 3, color: "#22D3EE" },
 ];
 
-<<<<<<< HEAD
-=======
-// NOTE: `year` and `link` are left blank (TODO) — send real dates/URLs and I'll fill them in.
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
 export const projects = [
   {
     title: "Study Scheduler App + Browser Extension",
@@ -109,11 +105,7 @@ export const projects = [
     color: "from-violet-500 to-blue-500",
     image:
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
     github: "https://github.com/supersmartva-hue/Study_Shedular",
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
   {
     title: "PassVault — Password Manager",
@@ -125,11 +117,7 @@ export const projects = [
     color: "from-slate-500 to-violet-500",
     image:
       "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
     github: "https://github.com/supersmartva-hue/password-manager",
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
   {
     title: "AI Agent Web Application",
@@ -141,10 +129,6 @@ export const projects = [
     color: "from-cyan-500 to-violet-500",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
   {
     title: "EventHub",
@@ -156,11 +140,7 @@ export const projects = [
     color: "from-blue-500 to-cyan-400",
     image:
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
     liveDemo: "https://eventhub-app.vercel.app/",
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
   {
     title: "Salaat + Task Reminder Web App",
@@ -172,11 +152,7 @@ export const projects = [
     color: "from-emerald-500 to-teal-400",
     image:
       "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
     github: "https://github.com/supersmartva-hue/niyyah-app/",
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
   {
     title: "Expense Tracker",
@@ -188,11 +164,7 @@ export const projects = [
     color: "from-amber-500 to-orange-500",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
     liveDemo: "https://supersmartva-hue.github.io/expense-tracker/",
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
   {
     title: "E-commerce Website",
@@ -204,12 +176,8 @@ export const projects = [
     color: "from-fuchsia-500 to-pink-500",
     image:
       "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&h=825&q=80",
-<<<<<<< HEAD
     liveDemo:
       "https://6a3fdb186af1e62ed16de0cf--guileless-paprenjak-368226.netlify.app/",
-=======
-    link: "#",
->>>>>>> fc0205dccdf2c93c51ad78fc611771b2c4712790
   },
 ];
 
