@@ -53,7 +53,7 @@ export default function About() {
               )}
             </div>
             <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-5 pt-16">
-              <p className="font-display text-lg font-semibold text-white">
+              <p className="about-media-title font-display text-lg font-semibold text-white">
                 {profile.name}
               </p>
             </div>

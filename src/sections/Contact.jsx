@@ -125,7 +125,7 @@ export default function Contact() {
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               onFocus={() => setFocused("message")}
               onBlur={() => setFocused(null)}
-              className="w-full resize-none border-b border-white/15 bg-transparent pt-3 pb-2 text-white outline-none transition-colors focus:border-cyan-300"
+              className="w-full resize-none border-b border-white/15 bg-transparent pt-3 pb-2 text-white outline-none shadow-[0_6px_20px_rgba(0,0,0,0.22)] transition-colors focus:border-cyan-300"
             />
           </div>
 

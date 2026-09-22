@@ -14,12 +14,13 @@ import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Certificates from "./sections/Certificates";
 import Contact from "./sections/Contact";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <>
+    <ThemeProvider>
       {loading && <Preloader onDone={() => setLoading(false)} />}
       <SmoothScroll>
         <CustomCursor />
@@ -40,7 +41,7 @@ function App() {
           <Footer />
         </div>
       </SmoothScroll>
-    </>
+    </ThemeProvider>
   );
 }
 

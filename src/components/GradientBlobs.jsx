@@ -10,7 +10,7 @@ export default function GradientBlobs() {
         className="absolute bottom-0 left-1/4 h-[28rem] w-[28rem] rounded-full bg-cyan-500/15 animate-pulse-glow blur-3xl"
         style={{ animationDelay: "2.4s" }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--color-ink)_78%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--theme-bg)_78%)]" />
       <div
         className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
         style={{

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { nav, profile } from "../data/content";
 import { useLenis } from "./SmoothScroll";
 import useActiveSection from "../hooks/useActiveSection";
+import { useTheme } from "./ThemeProvider";
 
 const ids = nav.map((n) => n.id);
 
@@ -11,6 +12,8 @@ export default function Navbar() {
   const lenis = useLenis();
   const active = useActiveSection(ids);
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const lightMode = theme === "light";
 
   const scrollTo = (id) => {
     setOpen(false);
@@ -64,6 +67,15 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-2 md:flex">
             <button
+              onClick={toggleTheme}
+              data-cursor="hover"
+              aria-label={lightMode ? "Switch to dark mode" : "Switch to light mode"}
+              title={lightMode ? "Switch to dark mode" : "Switch to light mode"}
+              className="flex h-9 w-9 items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+            >
+              {lightMode ? <Moon size={17} /> : <Sun size={17} />}
+            </button>
+            <button
               onClick={() => scrollTo("contact")}
               data-cursor="hover"
               className="rounded-full bg-gradient-to-r from-violet-500 to-blue-500 px-4 py-1.5 text-sm font-medium text-white shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-transform hover:scale-105"
@@ -71,6 +83,16 @@ export default function Navbar() {
               Let's talk
             </button>
           </div>
+
+          <button
+            onClick={toggleTheme}
+            data-cursor="hover"
+            aria-label={lightMode ? "Switch to dark mode" : "Switch to light mode"}
+            title={lightMode ? "Switch to dark mode" : "Switch to light mode"}
+            className="mr-2 flex h-9 w-9 items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/10 hover:text-white md:hidden"
+          >
+            {lightMode ? <Moon size={17} /> : <Sun size={17} />}
+          </button>
 
           <button
             onClick={() => setOpen((o) => !o)}
